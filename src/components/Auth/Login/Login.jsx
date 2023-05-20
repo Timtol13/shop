@@ -11,7 +11,8 @@ export const Login = () => {
         password: ''
       },
       onSubmit: values => {
-        AuthAPI.loginReq(values)
+        sessionStorage.setItem('auth', JSON.stringify(values))
+        //AuthAPI.loginReq(values)
       }
     }
   )
