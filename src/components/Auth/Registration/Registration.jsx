@@ -19,7 +19,6 @@ export const Registration = () => {
       onSubmit: values =>{
         if(password === values.password){
           AuthAPI.registrationReq(values)
-          console.log(values)
           setError('')
         } else {
           setError('Поля не совпадают!')

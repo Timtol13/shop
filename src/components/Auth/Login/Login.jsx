@@ -12,7 +12,7 @@ export const Login = () => {
       },
       onSubmit: values => {
         sessionStorage.setItem('auth', JSON.stringify(values))
-        //AuthAPI.loginReq(values)
+        AuthAPI.loginReq(values)
       }
     }
   )

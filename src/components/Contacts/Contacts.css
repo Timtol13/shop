@@ -1,0 +1,126 @@
+section{
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.text{
+    width: 100%;
+}
+.hh{
+    width: 100%;
+    display: flex;
+}
+.hh h1{
+    flex: 1 1 0;
+}
+.main-container{
+    width: 100%;
+    display: flex;
+}
+.container-content{
+    flex: 1 1 0;
+    width: 120px;
+    height: 420px;
+    padding: 20px;
+    border-radius: 30px;
+    background: #A2C4CB;
+}
+.container-content:not(:last-child){
+    margin-right: 40px;
+}
+.send{
+    background: #79A1A9;
+    padding: 15px;
+    width: 180px;
+    border: none;
+    border-radius: 10px;
+}
+.inputss{
+    height: 320px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.inn{
+    width: 290px;
+    resize: none;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    height: 30px;
+    margin-bottom: 40px;
+}
+.textarea{
+    height: 60px;
+}
+.pics{
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+}
+.picsimg{
+    flex: 1 1 0;
+    width: 60px;
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+.picsimg img{
+    border-radius: 3px;
+}
+.mapimg{
+    width: 80px;
+    margin-left: -10px;
+}
+.map{
+    height: 390px;
+}
+.map img{
+    width: 100%;
+    height: 100%;
+}
+.container-contacts{
+    display: flex;
+}
+.rating-area {
+    width: 100%;
+    transform: scale(-1, 1);
+	overflow: hidden;
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	width: 21px;
+	padding: 20px;
+	cursor: pointer;
+	font-size: 38px;
+	line-height: 32px;
+	color: lightgrey;
+    margin-left: auto;
+    margin-right: auto;
+	text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px goldenrod;
+}
+.rate-area > label:active {
+	position: absolute;
+}

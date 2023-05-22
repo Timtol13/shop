@@ -28,12 +28,12 @@ export const Header = () => {
                 <li className="menu__item"><a href="/contacts" className="menu__link">Контакты</a></li>
             </ul>
             <div className="img">
-                <button className="media">
+                <a href={'/profile'} className="media">
                     <img src="/images/people.png" alt=""/>
-                </button>
-                <button className="media">
+                </a>
+                <a href={'/trash'} className="media">
                     <img src="/images/corzina.png" width="32px"height="35px" alt=""/>
-                </button>
+                </a>
             </div>
         </nav>
         <div className="line"></div>
