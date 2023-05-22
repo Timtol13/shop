@@ -1,6 +1,10 @@
 section{
     max-width: 100%;
     overflow: hidden;
+    
+}
+.contactt{
+    background: #B3A3A1;
 }
 
 .text{
@@ -23,7 +27,8 @@ section{
     height: 420px;
     padding: 20px;
     border-radius: 30px;
-    background: #A2C4CB;
+    background-color: #f5f5f5;
+    
 }
 .container-content:not(:last-child){
     margin-right: 40px;
@@ -51,6 +56,8 @@ section{
     padding: 10px;
     height: 30px;
     margin-bottom: 40px;
+    background: #B3A3A1;
+    color: #000;
 }
 .textarea{
     height: 60px;
@@ -95,8 +102,8 @@ section{
 	width: 21px;
 	padding: 20px;
 	cursor: pointer;
-	font-size: 38px;
-	line-height: 32px;
+	font-size: 50px;
+	line-height: 41px;
 	color: lightgrey;
     margin-left: auto;
     margin-right: auto;
@@ -106,20 +113,20 @@ section{
 	content: '★';
 }
 .rating-area > input:checked ~ label {
-	color: gold;
+	color: #B3A3A1;
 	text-shadow: 1px 1px #c60;
 }
 .rating-area:not(:checked) > label:hover,
 .rating-area:not(:checked) > label:hover ~ label {
-	color: gold;
+	color: #B3A3A1;
 }
 .rating-area > input:checked + label:hover,
 .rating-area > input:checked + label:hover ~ label,
 .rating-area > input:checked ~ label:hover,
 .rating-area > input:checked ~ label:hover ~ label,
 .rating-area > label:hover ~ input:checked ~ label {
-	color: gold;
-	text-shadow: 1px 1px goldenrod;
+	color: #B3A3A1;
+	text-shadow: 1px 1px #A2A2A0;
 }
 .rate-area > label:active {
 	position: absolute;

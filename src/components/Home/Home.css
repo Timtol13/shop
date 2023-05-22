@@ -1,6 +1,9 @@
 section{
     padding: 40px;
 }
+.home{
+    background: #E2ECEE;
+}
 .text{
     position: relative;
     width:100%;
@@ -10,7 +13,7 @@ section{
 }
 .hea{
     left: 50%;
-    width:45%;
+    width:60%;
     text-align: center;
     color: #2B535A;
     font-size: 28px;
@@ -18,6 +21,11 @@ section{
 .par{
     width:100%;
     text-align: left;
+}
+.hea h1{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .info{
     position: relative;
@@ -40,6 +48,8 @@ section{
 .hea1 p{
     font-size: 32px;
     color: #2D6974;
+    text-align: left;
+    margin-left: 10px;
 }
 .data{
     position: relative;
@@ -65,6 +75,7 @@ section{
     background: none;
     font-size: 32px;
     color: #2D6974;
+    text-align: left;
 }
 .h h1{
     font-size:48px;
@@ -81,4 +92,13 @@ section{
     width: 340px;
     margin-left: auto;
     margin-right: auto;
+}
+.tovari{
+    padding: 20px;
+    margin-bottom: -80px;
+    margin-left: -20px;
+    height: 460px;
+}
+.nazvanie, .opisanie, .title, .title .s{
+    color: #fff;
 }

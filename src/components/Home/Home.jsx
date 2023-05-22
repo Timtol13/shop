@@ -1,12 +1,13 @@
 import React from 'react'
 import './Home.css'
 import { Header } from '../Header/Header'
+import { Footer } from '../Footer/Footer'
 
 export const Home = () => {
   return (
     <div>
         <Header />
-        <section>
+        <section className={'home'}>
         <div class="text">
            <div class="hea">
                 <h1>Официальный интернет-магазин мебели в Минске</h1>
@@ -47,9 +48,8 @@ export const Home = () => {
         </div>
         <div class="h">
             <h1>Специальные предложения</h1>
-            <section className="product">
                 <div className="container_2">
-                    <div className="tovari">
+                    <div className="tovari tovariMain">
                         <div className="opis opis_1">
                             <img src="/images/krovat.jpg" alt="" className="kr" width="350px"/>
                             <p className="nazvanie">Спальня 2</p>
@@ -58,12 +58,12 @@ export const Home = () => {
                         <div className="opis opis_2">
                             <img src="/images/table black.jpg" alt="" className="kr"width="250px"/>
                             <p className="nazvanie">Фуршетный столик</p>
-                            <p className="opisanie_2">Мебель изготовленная из высококачественного массива дерева для спальной комнаты, подходит для любого вида дизайна</p>
+                            <p className="opisanie">Мебель изготовленная из высококачественного массива дерева для спальной комнаты, подходит для любого вида дизайна</p>
                         </div>
                         <div className="opis opis_3">
                             <img src="/images/luchshie-divany 1.jpg" alt="" className="kr"width="400px"/>
-                            <p className="nazvanie_3">Диван “Купель”</p>
-                            <p className="opisanie_3">Мягкий, хорошо пошитый диван, с качественной ткани, созданый для комфортного  отдыха</p>
+                            <p className="nazvanie">Диван “Купель”</p>
+                            <p className="opisanie">Мягкий, хорошо пошитый диван, с качественной ткани, созданый для комфортного  отдыха</p>
                         </div>
                         <div className="cont_money">
                             <div className="title">
@@ -77,12 +77,11 @@ export const Home = () => {
                             </div>
                         </div>
                     </div>
+                    <a className={'link'} href={'/ourProducts'}>Показать все товары</a>
                 </div>
-                
-            </section>
-            <a className={'link'} href={'/ourProducts'}>Показать все товары</a>
         </div>
     </section>
+    <Footer />
     </div>
   )
 }

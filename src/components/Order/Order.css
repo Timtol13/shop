@@ -1,0 +1,32 @@
+.form-inp{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input-element{
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2B535A;
+    color: #EAF5F8;
+
+}
+.form-textarea-element{
+    resize: none;
+    background-color: #2B535A;
+    color: #EAF5F8;
+}
+.form-button{
+    width: 120px;
+    padding: 10px;
+    align-self: center;
+    background-color: #B3A3A1;
+    border: none;
+    border-radius: 10px;;
+}

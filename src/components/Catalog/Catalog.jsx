@@ -3,6 +3,7 @@ import './Catalog.css'
 import { Header } from '../Header/Header'
 import Modal from '@mui/material/Modal'
 import Box from '@mui/material/Box'
+import { Footer } from '../Footer/Footer'
 
 export const Catalog = () => {
     const [open, setOpen] = useState(false)
@@ -11,6 +12,10 @@ export const Catalog = () => {
     const [title, setTitle] = useState('')
     const [price, setPrice] = useState('')
     const [image, setImage] = useState('')
+    const handlePay = () => {
+        sessionStorage.setItem('item', JSON.stringify({'title': title, 'price': price, 'image': image}))
+        window.location.replace('/order')
+    }
   return (
     <div>
         <Header />
@@ -214,18 +219,7 @@ export const Catalog = () => {
             </div>
         </div>
     </section>
-    <footer className = "below">
-        <div className="paragraphs">
-            <div className="block">
-                <p>1</p>
-                <p>2</p>
-            </div>
-            <div className="block1">
-                <p>1</p>
-                <p>2</p>
-            </div>
-        </div>
-    </footer>
+    <Footer />
     <Modal
         open={open}
         onClose={handleClose}>
@@ -235,7 +229,7 @@ export const Catalog = () => {
                 <div>
                     <h1>{title}</h1>
                     <h3>{price}</h3>
-                    <button>Купить</button>
+                    <button onClick={handlePay}>Купить</button>
                 </div>
             </div>
         </Box>

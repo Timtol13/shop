@@ -2,6 +2,7 @@ import React from 'react'
 import { Header } from '../Header/Header'
 import Flickity from 'react-flickity-component'
 import './OurProducts.css'
+import { Footer } from '../Footer/Footer'
 
 export const OurProducts = () => {
 
@@ -23,15 +24,15 @@ export const OurProducts = () => {
                 <div className="opis opis_2">
                     <img src="/images/table black.jpg" alt="" className="kr"width="250px"/>
                     <p className="nazvanie">Фуршетный столик</p>
-                    <p className="opisanie_2">Мебель изготовленная из высококачественного массива дерева для спальной комнаты, подходит для любого вида дизайна</p>
+                    <p className="opisanie">Мебель изготовленная из высококачественного массива дерева для спальной комнаты, подходит для любого вида дизайна</p>
                     <div className="last last_2">
                         <button className="like"><a href="/order"><img src="/images/corzina.png" alt=""/></a></button>
                     </div>
                 </div>
                 <div className="opis opis_3">
                     <img src="/images/luchshie-divany 1.jpg" alt="" className="kr"width="400px"/>
-                    <p className="nazvanie_3">Диван “Купель”</p>
-                    <p className="opisanie_3">Мягкий, хорошо пошитый диван, с качественной ткани, созданый для комфортного  отдыха</p>
+                    <p className="nazvanie">Диван “Купель”</p>
+                    <p className="opisanie">Мягкий, хорошо пошитый диван, с качественной ткани, созданый для комфортного  отдыха</p>
                     <div className="last last_3">
                         <button className="like"><a href="/order"><img src="/images/corzina.png" alt=""/></a></button>
                     </div>
@@ -112,9 +113,15 @@ export const OurProducts = () => {
                 <p className="descr">
                     В нашем каталоге вы сможете подобрать любую продукцию на ваш вкус, с любыми интересующими вас параметрами и ценообразованием. В нашей коллекции вы сможете найти кровати, диваны, комоды, столы, кресла, комплекты гостинной и спальной мебели, изготовленные из высококачественных материалов.
                 </p>
+                <button class="p-catal">
+                    <div class="naz">
+                        <a href="C:xampp/htdocs/START/catalog/catalog.php">Перейти в каталог</a>
+                    </div>
+                </button>
             </div>
         </div>
     </section>
+    <Footer />
     </div>
   )
 }

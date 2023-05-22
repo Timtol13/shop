@@ -7,6 +7,7 @@ import { OurProducts } from './OurProducts/OurProducts'
 import { Catalog } from './Catalog/Catalog'
 import { Contacts } from './Contacts/Contacts'
 import { Profile } from './Profile/Profile'
+import { Order } from './Order/Order'
 
 export const Main = () => {
   return (
@@ -19,6 +20,7 @@ export const Main = () => {
             <Route path={'/signup'} element={<Registration />}/>
             <Route path={'/profile'} element={<Profile />}/>
             <Route path={'/contacts'} element={<Contacts />}/>
+            <Route path={'/order'} element={<Order />}/>
         </Routes>
     </div>
   )

@@ -1,28 +1,33 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './Contacts.css'
 import { Header } from '../Header/Header'
 import { useFormik } from 'formik'
 import { AuthAPI } from '../api/api'
+import { Footer } from '../Footer/Footer'
 
 export const Contacts = () => {
     const [star, setStar] = useState()
+    const [name, setName] = useState()
+    const [email, setEmail] = useState()
+    useEffect(() => {
+        setName(JSON.parse(sessionStorage.getItem('auth')).name)
+        setEmail(JSON.parse(sessionStorage.getItem('auth')).email)
+    }, [])
     const formik = useFormik(
         {
             initialValues: {
-                name: '',
-                email: '',
                 message: ''
             },
             onSubmit: values =>{
                 console.log(values, star)
-                AuthAPI.sendMessage(values.name, values.email, values.message, star)
+                AuthAPI.sendMessage(name, email, values.message, star)
             }
         }
     )
   return (
     <div>
         <Header />
-        <section>
+        <section className='contactt'>
         <div class="text">
             <div class="hh">
                 <h1>Обратная связь</h1>
@@ -45,8 +50,6 @@ export const Contacts = () => {
                 </div>
                 <div class="in">
                     <form action="" class ="inputss" onSubmit={formik.handleSubmit}>
-                        <input type="text" placeholder="Имя" class ="inn" {...formik.getFieldProps('name')}/>
-                        <input type="text" placeholder="Почта" class ="inn" {...formik.getFieldProps('email')}/>
                         <textarea type="text" placeholder="Введите сообщение" class ="inn textarea" {...formik.getFieldProps('message')}>
                         </textarea>
                         <div class="but">
@@ -81,6 +84,7 @@ export const Contacts = () => {
             </div>
         </div>
     </section>
+    <Footer />
     </div>
   )
 }

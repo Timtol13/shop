@@ -14,33 +14,39 @@ const instancePhoto = axios.create({
 })
 
 export const AuthAPI = {
-    loginReq({login, password}){
-        return instance.get(`login/${login}/${password}`).then(() => {this.findUser(login).then(e => {
-            console.log(e)
-            window.location.replace('/')
-        }
-        )})
+    loginReq({email, password}){
+        return instance.get(`login/${email}/${password}`).then(() => { this.findUser(email) })
     },
     registrationReq({login, password, name, surname, email}){
-        return instance.post('registration', {login, email, name, surname, password}).then(() => { 
-            sessionStorage.setItem('auth', JSON.stringify(
-                {
-                    'login': login,
-                    'password': password,
-                    'name': name,
-                    'surname': surname,
-                    'email': email
-                }
-            ))
-        }).then(() => {this.loginReq({login, password})})
+        return instance.post('registration', {login, email, name, surname, password}).then(() => {this.loginReq({login, password})})
     },
-    sendPhoto(email, files){
+    sendPhoto({email, files}){
+        console.log(email, files)
         return instancePhoto.post('/sendPhoto', {email, files})
     },
     findUser(email){
-        return instance.get(`user/${email}`)
+        return instance.get(`user/${email}`).then(e=>{
+            sessionStorage.setItem('auth', JSON.stringify(
+                {
+                    'login': e.data.login,
+                    'password': e.data.password,
+                    'name': e.data.name,
+                    'surname': e.data.surname,
+                    'email': e.data.email
+                }
+            ))
+            if(e.data) window.location.replace('/')
+        })
     },
     sendMessage(name, email, message, star){
         return instance.post('sendMessage', {name, email, message, star})
+    },
+    getPhoto(email){
+        return instancePhoto.get(`getPhoto/${email}`)
+    }
+}
+export const OrderAPI = {
+    sendOrder({title, price, cardNum, cardDate, message, email, login}){
+        return instance.post('/makeOrder', {title, price, cardNum, cardDate, message, email, login})
     }
 }

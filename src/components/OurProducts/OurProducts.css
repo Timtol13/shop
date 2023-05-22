@@ -2,6 +2,7 @@ h1, h2, h3, h4, h5, h6, p, div{
     color: #B3A3A1;
 }
 .tovari{
+    width: 100%;
     display: flex;
     background-color: #B3A3A1;
     color: #fff;
@@ -64,7 +65,7 @@ h1, h2, h3, h4, h5, h6, p, div{
   height: 240px;
 }
 .footer{
-  positioN: absolute;
+  position: relative;
   background-color: #B3A3A1;
   margin-top: 40px; 
   width: 100%;

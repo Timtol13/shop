@@ -15,10 +15,12 @@ export const Header = () => {
                     <input type="text" placeholder="Поиск" />
                     <img src="/images/poisk.png" alt="" className="poisk" width="25px" height="23px" />
                 </div>
+                {auth? <div className={'el'}></div> : 
                 <div className={'el'}>
                     <a className={'el_link'} href="/login">Войти</a> 
                     <a className={'el_link'} href="/signup">Зарегистрироваться</a> 
                 </div>
+                }
             </div>
         </div>
         <nav className="menu">
@@ -28,7 +30,7 @@ export const Header = () => {
                 <li className="menu__item"><a href="/contacts" className="menu__link">Контакты</a></li>
             </ul>
             <div className="img">
-                <a href={'/profile'} className="media">
+                <a href={auth? '/profile': '/login'} className="media">
                     <img src="/images/people.png" alt=""/>
                 </a>
                 <a href={'/trash'} className="media">

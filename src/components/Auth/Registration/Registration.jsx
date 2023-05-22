@@ -41,7 +41,6 @@ export const Registration = () => {
                     <input type="file"
                            accept="image/*"
                            onChange={(event) => {
-                                console.log(event.target.files[0])
                                 AuthAPI.sendPhoto({'email': email, 'files': event.target.files[0]})
                               }
                             }
