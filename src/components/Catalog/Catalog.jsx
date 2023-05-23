@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Catalog.css' 
 import { Header } from '../Header/Header'
 import Modal from '@mui/material/Modal'
@@ -12,9 +12,13 @@ export const Catalog = () => {
     const [title, setTitle] = useState('')
     const [price, setPrice] = useState('')
     const [image, setImage] = useState('')
-    const handlePay = () => {
-        sessionStorage.setItem('item', JSON.stringify({'title': title, 'price': price, 'image': image}))
-        window.location.replace('/order')
+    const [orderArray, setOrderArray] = useState([{}])
+    useEffect(() => {
+        setOrderArray(JSON.parse(sessionStorage.getItem('item')))
+    }, [])
+    const handlePay = (titleP, priceP, imageP) => {
+        setOrderArray(n => [...n, {'title': titleP, 'price': priceP, 'image': imageP}])
+        sessionStorage.setItem('item', JSON.stringify(orderArray))
     }
   return (
     <div>
@@ -103,8 +107,8 @@ export const Catalog = () => {
                             <div className="ic">
                                 <button onClick={() => {
                                     handleOpen()
-                                    setTitle('Кровать с шипами')
-                                    setPrice('1666 р.')
+                                    setTitle('Компьютерный стол')
+                                    setPrice('1250 р.')
                                     setImage('/images/Rectangle 92.png')
                                     }}><img src="/images/trash.png" alt=""/></button>
                             </div>
@@ -124,8 +128,8 @@ export const Catalog = () => {
                             <div className="ic">
                                 <button onClick={() => {
                                     handleOpen()
-                                    setTitle('Кровать с шипами')
-                                    setPrice('1666 р.')
+                                    setTitle('Диван “Зигзаг”')
+                                    setPrice('2560 р.')
                                     setImage('/images/Rectangle 95.png')
                                     }}><img src="/images/trash.png" alt=""/></button>
                             </div>
@@ -145,8 +149,8 @@ export const Catalog = () => {
                             <div className="ic">
                                 <button onClick={() => {
                                     handleOpen()
-                                    setTitle('Кровать с шипами')
-                                    setPrice('1666 р.')
+                                    setTitle('Диван “Гном”')
+                                    setPrice('1800 р.')
                                     setImage('/images/Rectangle 101.png')
                                     }}><img src="/images/trash.png" alt=""/></button>
                             </div>
@@ -166,8 +170,8 @@ export const Catalog = () => {
                             <div className="ic">
                                 <button onClick={() => {
                                     handleOpen()
-                                    setTitle('Кровать с шипами')
-                                    setPrice('1666 р.')
+                                    setTitle('Набор для интерьера')
+                                    setPrice('2340 р.')
                                     setImage('/images/Rectangle 100.png')
                                     }}><img src="/images/trash.png" alt=""/></button>
                             </div>
@@ -187,8 +191,8 @@ export const Catalog = () => {
                             <div className="ic">
                                 <button onClick={() => {
                                     handleOpen()
-                                    setTitle('Кровать с шипами')
-                                    setPrice('1666 р.')
+                                    setTitle('Охотничий столик')
+                                    setPrice('450 р.')
                                     setImage('/images/Rectangle 97.png')
                                     }}><img src="/images/trash.png" alt=""/></button>
                             </div>
@@ -208,8 +212,8 @@ export const Catalog = () => {
                             <div className="ic">
                                 <button onClick={() => {
                                     handleOpen()
-                                    setTitle('Кровать с шипами')
-                                    setPrice('1666 р.')
+                                    setTitle('Диван “Фатальная ошибка”')
+                                    setPrice('2150 р.')
                                     setImage('/images/Rectangle 98.png')
                                     }}><img src="/images/trash.png" alt=""/></button>
                             </div>
@@ -229,7 +233,7 @@ export const Catalog = () => {
                 <div>
                     <h1>{title}</h1>
                     <h3>{price}</h3>
-                    <button onClick={handlePay}>Купить</button>
+                    <button onClick={() => {handlePay(title, price, image)}}>Купить</button>
                 </div>
             </div>
         </Box>

@@ -48,5 +48,8 @@ export const AuthAPI = {
 export const OrderAPI = {
     sendOrder({title, price, cardNum, cardDate, message, email, login}){
         return instance.post('/makeOrder', {title, price, cardNum, cardDate, message, email, login})
+    },
+    getOrders(email){
+        return instance.get(`/getOrders/${email}`)
     }
 }

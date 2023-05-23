@@ -8,6 +8,7 @@ import { Catalog } from './Catalog/Catalog'
 import { Contacts } from './Contacts/Contacts'
 import { Profile } from './Profile/Profile'
 import { Order } from './Order/Order'
+import { Trash } from './Trash/Trash'
 
 export const Main = () => {
   return (
@@ -21,6 +22,7 @@ export const Main = () => {
             <Route path={'/profile'} element={<Profile />}/>
             <Route path={'/contacts'} element={<Contacts />}/>
             <Route path={'/order'} element={<Order />}/>
+            <Route path={'/trash'} element={<Trash />} />
         </Routes>
     </div>
   )

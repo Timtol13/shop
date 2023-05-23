@@ -14,6 +14,7 @@
     border: none;
     border-radius: 10px;
     background-color: #2B535A;
+    width: 260px;
     color: #EAF5F8;
 
 }
@@ -29,4 +30,12 @@
     background-color: #B3A3A1;
     border: none;
     border-radius: 10px;;
+}
+.form-objects{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-object{
+    width: 350px;
 }

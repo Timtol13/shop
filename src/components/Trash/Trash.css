@@ -1,0 +1,40 @@
+.ordersTrash{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.productTrash{
+    width: 250px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+.productTrash h1{
+    font-size: medium;
+}
+.elementRemove{
+    margin-top: auto;
+    padding: 10px;
+    background-color: #f33;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    width: 120px;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+.elementBuy{
+    margin-top: auto;
+    padding: 10px;
+    background-color: #3f3;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    width: 120px;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 10px;
+}

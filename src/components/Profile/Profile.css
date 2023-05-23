@@ -1,0 +1,12 @@
+.profilePage{
+    min-height: 70vh;
+}
+.myData{
+    display: flex;
+    width: 24%;
+}
+.myData img{
+    width: 150px;
+    border: 1px solid #000;
+    border-radius: 150px;
+}
