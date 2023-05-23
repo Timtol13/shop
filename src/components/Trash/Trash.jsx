@@ -12,14 +12,14 @@ export const Trash = () => {
         sessionStorage.setItem('item', JSON.stringify([{}]))
     }
     const handleRemove = (index) =>{
-        orders.pop(index)
+        orders.splice(index, 1)
         sessionStorage.setItem('item', JSON.stringify(orders))
     }
   return (
     <div>
         <Header />
         <button className={'elementRemove'} onClick={handleClear}>Очистить корзину</button>
-        <button className={'elementBuy'} onClick={() => {window.location.replace('/order')}}>Очистить корзину</button>
+        <button className={'elementBuy'} onClick={() => {window.location.replace('/order')}}>Купить</button>
         <div className={'ordersTrash'}>
             {orders?.map((el, index) => {
                 return (
