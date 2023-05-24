@@ -10,10 +10,12 @@ export const Trash = () => {
     }, [])
     const handleClear = () => {
         sessionStorage.setItem('item', JSON.stringify([{}]))
+        window.location.reload()
     }
     const handleRemove = (index) =>{
         orders.splice(index, 1)
         sessionStorage.setItem('item', JSON.stringify(orders))
+        window.location.reload()
     }
   return (
     <div>
@@ -22,13 +24,16 @@ export const Trash = () => {
         <button className={'elementBuy'} onClick={() => {window.location.replace('/order')}}>Купить</button>
         <div className={'ordersTrash'}>
             {orders?.map((el, index) => {
-                return (
-                <div className={'productTrash'}>
-                    <img src={el.image} />
-                    <h1>{el.title}</h1>
-                    <h3>{el.price}</h3>
-                    <button className={'elementRemove'} onClick={() => {handleRemove(index)}}>Удалить</button>
-                </div>)
+                if(el.title){
+                    return (
+                    <div className={'productTrash'}>
+                        <img src={el.image} />
+                        <h1>{el.title}</h1>
+                        <h3>{el.price}</h3>
+                        <button className={'elementRemove'} onClick={() => {handleRemove(index)}}>Удалить</button>
+                    </div>
+                    )
+                }
             })}
         </div>
         <Footer />

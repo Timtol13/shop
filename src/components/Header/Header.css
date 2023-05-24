@@ -7,6 +7,7 @@
     justify-content: center;
     margin: 0 auto;
     align-items: center;
+    background: #00000000;
 }
 .container{
     width: 100%;
@@ -92,7 +93,25 @@ ul{
 .media{
     background-color: #B3A3A1;
     border: none;
+    height: 35px;
+    width: 35px;
     margin-left: auto;
     margin-right: 10px;
     border-radius: 10px;
+}
+.blue_color{
+    color: #2D6974;
+}
+.blue_bgcolor{
+    background: #A1C0C6;
+}
+.blue_bgcolorinput input{
+    background: #A1C0C6;
+    color: #fff;
+}
+.lineblock{
+    display: block;
+    width: 95%;
+    height: 2px;
+    background-color: #000;
 }

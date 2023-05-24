@@ -18,7 +18,7 @@ export const OurProducts = () => {
                     <p className="nazvanie">Спальня 2</p>
                     <p className="opisanie">Качественная мебель из дерева, хорошая обработка, отделка, состояние мебели в вашу комнату</p>
                     <div className="last last_1">
-                        <button className="like"><a href="/order"><img src="/images/corzina.png" alt=""/></a></button>
+                        <button className="like"><a href="/catalog"><img src="/images/corzina.png" alt=""/></a></button>
                     </div>
                 </div>
                 <div className="opis opis_2">
@@ -26,7 +26,7 @@ export const OurProducts = () => {
                     <p className="nazvanie">Фуршетный столик</p>
                     <p className="opisanie">Мебель изготовленная из высококачественного массива дерева для спальной комнаты, подходит для любого вида дизайна</p>
                     <div className="last last_2">
-                        <button className="like"><a href="/order"><img src="/images/corzina.png" alt=""/></a></button>
+                        <button className="like"><a href="/catalog"><img src="/images/corzina.png" alt=""/></a></button>
                     </div>
                 </div>
                 <div className="opis opis_3">
@@ -34,7 +34,7 @@ export const OurProducts = () => {
                     <p className="nazvanie">Диван “Купель”</p>
                     <p className="opisanie">Мягкий, хорошо пошитый диван, с качественной ткани, созданый для комфортного  отдыха</p>
                     <div className="last last_3">
-                        <button className="like"><a href="/order"><img src="/images/corzina.png" alt=""/></a></button>
+                        <button className="like"><a href="/catalog"><img src="/images/corzina.png" alt=""/></a></button>
                     </div>
                 </div>
                 <div className="cont_money">
@@ -60,42 +60,42 @@ export const OurProducts = () => {
                 <img className={'image_source'} src="/images/qinghong-shen-2Kk81Yj8TM8-unsplash 1.jpg" alt=""/>
                 <h8 className="name">Кресло "Самурай"</h8><span className="rub">290р.</span>
                 <div className="md">
-                    <button className="d"><a href="/order"><img src="/images/corzina.png" alt=""/></a></button>
+                    <button className="d"><a href="/catalog"><img src="/images/corzina.png" alt=""/></a></button>
                 </div>
             </div>
             <div className="slider__item">
                 <img className={'image_source'} src="/images/r-architecture-TRCJ-87Yoh0-unsplash 1.jpg" alt=""/>
                 <h8 className="name_2">Кухня 1</h8><span className="rub">2190 р.</span>
                 <div className="md_2">
-                    <button className="d d_2"><a href="/order"><img src="/images/corzina.png" alt=""/></a></button>
+                    <button className="d d_2"><a href="/catalog"><img src="/images/corzina.png" alt=""/></a></button>
                 </div>
             </div>
             <div className="slider__item filter">
                 <img className={'image_source'} src="/images/nathan-oakley--peWKMDCyw4-unsplash.jpg" alt=""/>
                 <h8 className="name_2">Дубовый комод</h8><span className="rub">290 р.</span>
                 <div className="md_2">
-                    <button className="d d_2"><a href="/order"><img src="/images/corzina.png" alt=""/></a></button>
+                    <button className="d d_2"><a href="/catalog"><img src="/images/corzina.png" alt=""/></a></button>
                 </div>
             </div>
             <div className="slider__item">
                 <img className={'image_source'} src="/images/dvuspalnaya-krovat 1.jpg" alt=""/>
                 <h8 className="name_2">Кровать. Хорошая</h8><span className="rub">780 р.</span>
                 <div className="md_2">
-                    <button className="d d_2"><a href="/order"><img src="/images/corzina.png" alt=""/></a></button>
+                    <button className="d d_2"><a href="/catalog"><img src="/images/corzina.png" alt=""/></a></button>
                 </div>
             </div>
             <div className="slider__item filter">
                 <img className={'image_source'} src="/images/Rectangle 100.jpg" alt=""/>
                 <h8 className="name_2">Набор для интерьера</h8><span className="rub">2340 р.</span>
                 <div className="md_2">
-                    <button className="d d_2"><a href="/order"><img src="/images/corzina.png" alt=""/></a></button>
+                    <button className="d d_2"><a href="/catalog"><img src="/images/corzina.png" alt=""/></a></button>
                 </div>
             </div>
             <div className="slider__item">
                 <img className={'image_source'} src="/images/Rectangle 91.jpg" alt=""/>
                 <h8 className="name_2">Диван “Зыбучий песок”</h8><span className="rub">850 р.</span>
                 <div className="md_2">
-                    <button className="d d_2"><a href="/order"><img src="/images/corzina.png" alt=""/></a></button>
+                    <button className="d d_2"><a href="/catalog"><img src="/images/corzina.png" alt=""/></a></button>
                 </div>
             </div>
         </Flickity>

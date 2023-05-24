@@ -15,7 +15,7 @@ const instancePhoto = axios.create({
 
 export const AuthAPI = {
     loginReq({email, password}){
-        return instance.get(`login/${email}/${password}`).then(() => { this.findUser(email) })
+        return instance.get(`login/${email}/${password}`).catch(e => {return 'qwe'}).then((e) => { this.findUser(email) })
     },
     registrationReq({login, password, name, surname, email}){
         return instance.post('registration', {login, email, name, surname, password}).then(() => {this.loginReq({login, password})})
@@ -35,7 +35,7 @@ export const AuthAPI = {
                     'email': e.data.email
                 }
             ))
-            if(e.data) window.location.replace('/')
+            if(e.data) {window.location.replace('/')}
         })
     },
     sendMessage(name, email, message, star){
@@ -43,6 +43,9 @@ export const AuthAPI = {
     },
     getPhoto(email){
         return instancePhoto.get(`getPhoto/${email}`)
+    },
+    editUser({name, surname, password, email, emailNow}){
+        return instance.put('editUser', {name, surname, password, email, emailNow})
     }
 }
 export const OrderAPI = {

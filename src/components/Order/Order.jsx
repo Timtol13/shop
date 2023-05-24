@@ -18,15 +18,21 @@ export const Order = () => {
         },
         onSubmit: values => {
             order.map(el => {
-                OrderAPI.sendOrder({'title': el.title, 'price': el.price,'cardNum':  values.cardNumber,'cardDate':  values.cardDate,'message':  values.message,'email':  user.email,'login':  user.login})
+                if (el.title){
+                    OrderAPI.sendOrder({'title': el.title, 'price': el.price,'cardNum':  values.cardNumber,'cardDate':  values.cardDate,'message':  values.message,'email':  user.email,'login':  user.login})
+                }
             })
-            //window.location.replace('/')
+            sessionStorage.setItem('item', JSON.stringify([{}]))
+            window.location.replace('/')
         }
     })
     const checkPrice = () => {
         setPrice(0)
+        
         order.map(el => {
-            setPrice(price => price + Number.parseInt(el.price))
+            if(el.price){
+                setPrice(price => price + Number.parseInt(el.price))
+            }
         })
     }
     useEffect(() => {
@@ -38,13 +44,15 @@ export const Order = () => {
         <Header />
                 <div className={'form-objects'}>
                     {order?.map(el => {
-                        return (
-                            <div className={'form-object'}>
-                                <img src={el.image} width={490} />
-                                <input className={'form-input-element'} value={el.title} readOnly={true} />
-                                <input className={'form-input-element'} value={el.price} readOnly={true} />  
-                            </div>
-                        )
+                        if (el.title){
+                            return (
+                                <div className={'form-object'}>
+                                    <img src={el.image} width={490} />
+                                    <input className={'form-input-element'} value={el.title} readOnly={true} />
+                                    <input className={'form-input-element'} value={el.price} readOnly={true} />  
+                                </div>
+                            )
+                        }
                     })}
                 </div>
             <form className='form-inp' onSubmit={formik.handleSubmit}>
