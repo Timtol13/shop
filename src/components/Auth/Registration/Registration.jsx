@@ -28,8 +28,8 @@ export const Registration = () => {
   )
   return (
     <div>
-    
         <form onSubmit={formik.handleSubmit} className={'form-container'}>
+            <h1 className={'formTitleAuth'}>Регистрация</h1>
             <input type="email" name="email" placeholder="Почта" className="box" {...formik.getFieldProps('email')} value={email} onChange={(e) => {setEmail(e.target.value)}} required />
             <input type="text" name="text" placeholder="Логин" className="box" {...formik.getFieldProps('login')} required />
             <input type="password" name="password" placeholder="Пароль" className="box" onChange={(e) => {setPassword(e.target.value)}} required />
@@ -48,8 +48,8 @@ export const Registration = () => {
                            id="button-photo"/>
                 </label>
             </div>
-              <p>У вас уже есть аккаунт? <a href="/signup">Войдите</a></p>
             <button className='btn' type='submit'>Зарегистрироваться</button>
+            <p>У вас уже есть аккаунт? <a href="/signup" className={'authLink'}>Войдите</a></p>
         </form>
     </div>
   )

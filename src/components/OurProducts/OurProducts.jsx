@@ -39,13 +39,16 @@ export const OurProducts = () => {
                 </div>
                 <div className="cont_money">
                     <div className="title">
-                        Спальная 2<span className="s">1890 р.</span>
+                        <span className={'spanClass'}><h5 className="s">Спальная 2</h5></span><span className={'spanClass'}><h5 className="s">1890 р.</h5></span>
                     </div>
                     <div className="title">
-                        Фуршетный столик<span className="s">90 р.</span>
+                        <span className={'spanClass'}><h5 className="s">Фуршетный столик</h5></span><span className={'spanClass'}><h5 className="s">90 р.</h5></span>
                     </div>
                     <div className="title">
-                        Диван “Купель”<span className="s">890 р.</span>
+                        <span className={'spanClass'}><h5 className="s">Диван “Купель”</h5></span><span className={'spanClass'}><h5 className="s">890 р.</h5></span>
+                    </div>
+                    <div className={'title'}>
+                        <a href={'/catalog'} className={'titleLink'}>Показать больше</a>
                     </div>
                 </div>
             </div>
@@ -121,7 +124,6 @@ export const OurProducts = () => {
             </div>
         </div>
     </section>
-    <Footer />
     </div>
   )
 }

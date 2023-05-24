@@ -1,9 +1,13 @@
 section{
     padding: 40px;
 }
+.infoHomeBlock{
+    padding: 40px;
+}
 .home{
     background: #E2ECEE;
 }
+
 .text{
     position: relative;
     width:100%;
@@ -22,8 +26,12 @@ section{
     width:100%;
     text-align: left;
 }
+.par p{
+    color: #2D6974;
+}
 .hea h1{
     width:80%;
+    color: #2B535A;
     margin-left: auto;
     margin-right: auto;
 }
@@ -36,20 +44,19 @@ section{
     display: flex;
 }
 .pho img{
+    width: 650px;
     float:left;
 }
 .hea1{
     padding-right: 100px;
 }
 .hea1 h1{
-    font-size: 32px;
     color: #2B535A;
 }
 .hea1 p{
-    font-size: 32px;
     color: #2D6974;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 .data{
     position: relative;
@@ -67,13 +74,14 @@ section{
 .c{
     background: #EAF5F8;
     border-radius: 0px 124px;
-    width: 580px;
-    height: 500px;
-    margin:30px;
+    width: 420px;
+    height: 360px;
+    margin: 80px;
 }
-.c ul,li{
+.c ul li{
     background: none;
-    font-size: 32px;
+    font-size: 24px;
+    width: 320px;
     color: #2D6974;
     text-align: left;
 }
@@ -93,12 +101,39 @@ section{
     margin-left: auto;
     margin-right: auto;
 }
-.tovari{
-    padding: 20px;
-    margin-bottom: -80px;
-    margin-left: -20px;
-    height: 460px;
+.goodsHome{
+    display: flex;
+    width: 100%;
+}
+.opis{
+    flex: 1 1 0;
 }
 .nazvanie, .opisanie, .title, .title .s{
-    color: #fff;
+    color: #000;
+}
+.footLine{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 150px;
+    margin-top: 50px;
+}
+.pInSecPar{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 50px;
+
+    letter-spacing: 0.1px;
+}
+.h1InSecPar{
+    text-align: left;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 50px;
+    margin-left: 40px;
+
+    letter-spacing: 0.1px;
+
+    color: #2B535A;
 }

@@ -70,12 +70,12 @@ export const Contacts = () => {
                         <a target='_blank' className={'picsimg'}  href={'callto:+375421231212'}>
                             <img src="/images/Life-PNG 1.png" alt=""/>
                         </a>
-                        <a target='_blank' className={'picsimg mapimg'} href={'https://www.google.com/maps/place/%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%B4%D0%B6+%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0+%D0%B8+%D0%BF%D1%80%D0%B0%D0%B2%D0%B0/@53.9179808,27.4253458,15z/data=!4m6!3m5!1s0x46dbce2d2dc47867:0xfb99f31aabb006f!8m2!3d53.9179808!4d27.4356468!16s%2Fg%2F1vd3tgp3'}>
-                            <img title={'Показать на карте'} src="/images/maps_96in128dp 1.png" alt=""/>
-                        </a>
                     </div>
                     <div class ="google">
-                        
+                        <a target='_blank' className={'picsimg mapimg'} href={'https://www.google.com/maps/place/%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%B4%D0%B6+%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0+%D0%B8+%D0%BF%D1%80%D0%B0%D0%B2%D0%B0/@53.9179808,27.4253458,15z/data=!4m6!3m5!1s0x46dbce2d2dc47867:0xfb99f31aabb006f!8m2!3d53.9179808!4d27.4356468!16s%2Fg%2F1vd3tgp3'}>
+                            <img title={'Показать на карте'} src="/images/maps_96in128dp 1.png" alt=""/>
+                            <h6>Показать на карте</h6>
+                        </a>
                     </div>
                 </div>
                 <div class="map">
@@ -84,7 +84,6 @@ export const Contacts = () => {
             </div>
         </div>
     </section>
-    <Footer />
     </div>
   )
 }

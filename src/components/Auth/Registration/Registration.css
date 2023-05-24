@@ -64,9 +64,9 @@
 }
 
 .files {
-    width: 150px;
-    align-self: flex-start;
-    margin-left: 100px;
+    width: 170px;
+    align-self: center;
+    margin-bottom: 40px;
 }
 .input_file {
   display: flex;
@@ -111,4 +111,10 @@ img {
 }
 .input_file .files{
     display: none;
+}
+.authLink{
+    font-size: 14px;
+}
+.formTitleAuth{
+    Color: #6e8095;
 }

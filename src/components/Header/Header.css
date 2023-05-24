@@ -109,6 +109,21 @@ ul{
     background: #A1C0C6;
     color: #fff;
 }
+.black_color{
+    color: #000;
+}
+.black_bgcolor{
+    background: #000;
+    color: #fff;
+}
+.black_bgcolor img{
+    filter: invert(1);
+}
+.black_bgcolorinput input{
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+}
 .lineblock{
     display: block;
     width: 95%;

@@ -16,7 +16,12 @@ export const Profile = () => {
         .then(blob => {
             setPhoto(URL.createObjectURL(blob))
         }).catch(err => {console.log(err)})
-        OrderAPI.getOrders().then(e => {setOrders(e.data)})
+        fetch(`http://localhost:3300/getOrders/${JSON.parse(sessionStorage.getItem('auth')).email}`).then(e => {
+                                    e.json().then(e => {
+                                        setOrders(e)
+                                    })
+                                }
+                                )
     }, [])
     const formik = useFormik(
         {
@@ -78,7 +83,8 @@ export const Profile = () => {
                 {orders.map(el => {
                     return (
                         <div className={'myOrder'}>
-                            <h1>{el.title}</h1>
+                            <h3>{el.title}</h3>
+                            <h3>{el.price}</h3>
                         </div>
                     )
                 })}

@@ -2,10 +2,11 @@
     position: relative;
     z-index: 2;
     bottom: 0%;
-    width: 100%;
-    background-color: #000000;
+    width: 98%;
+    padding: 1%;
     height: 160px;
     display: flex;
+    background: #000;
 }
 .footter .ftblock{
     flex: 1 1 0;
@@ -17,4 +18,13 @@
 .ft_block__right{
     justify-self: flex-end;
     text-align: right;
+}
+.ftblock h3{
+    color: #fff;
+}
+.blue_color{
+    color: #2D6974;
+}
+.blue_bgcolor{
+    background: #A1C0C6;
 }

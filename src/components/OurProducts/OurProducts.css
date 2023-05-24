@@ -2,22 +2,27 @@ h1, h2, h3, h4, h5, h6, p, div{
     color: #B3A3A1;
 }
 .tovari{
-    width: 100%;
+    width: 105%;
+    margin-left: -2.5%;
+    height: 140%;
+    padding-top: 50px;
     display: flex;
     background-color: #B3A3A1;
     color: #fff;
 }
 .opis{
-    width: 30%;
     display: flex;
     flex-direction: column;
+}
+.opisanie, .nazvanie{
+  color: #fff;
 }
 .opis img{
     height: 240px;
 } 
 .s{
   background: none;
-  color: #B3A3A1;
+  color: #fff;
 }
 .opis .last button, .opis .last button img{
     padding: 0;
@@ -39,19 +44,17 @@ h1, h2, h3, h4, h5, h6, p, div{
   color: #B3A3A1;
 }
 .slider__item{
-    height: 540px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .slider{
-    width: 100%;
-    height: 540px;
+    height: 340px;
 }
 
 .flickity-viewport{
-    height: 540px;
+    width: 100%;
 }
 
 .botan .more{
@@ -69,7 +72,7 @@ h1, h2, h3, h4, h5, h6, p, div{
   background-color: #B3A3A1;
   margin-top: 40px; 
   width: 100%;
-  height:568px;
+  height:868px;
   padding: 0;
   /* overflow: hidden; */
 }
@@ -106,6 +109,18 @@ h1, h2, h3, h4, h5, h6, p, div{
   margin: 0 auto;
   margin-left: 40%;
   margin-top: 120px;
+}
+
+.title{
+  display: flex;
+}
+.titleLink{
+  border: 1px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 18px;
+  color: #fff;
 }
 
 .descr{
@@ -146,7 +161,12 @@ h1, h2, h3, h4, h5, h6, p, div{
     width: 60px;
     height: 40px;
 }
-
+.spanClass{
+  background: none;
+}
+.spanClass h5{
+  color: #fff;
+}
 
 
 

@@ -18,10 +18,11 @@ export const Login = () => {
   return (
     <div>
         <form onSubmit={formik.handleSubmit} className={'form-container'}>
+          <h1 className={'formTitleAuth'}>Вход</h1>
           <input type="email" name="login" placeholder="Почта" className="box" {...formik.getFieldProps('email')} required />
             <input type="password" name="password" placeholder="Пароль" className="box" {...formik.getFieldProps('password')} required />
-            <p>У вас нету ещё аккаунта? <a href="/signup">Зарегистрируйтесь</a></p>
           <button className='btn' type='submit'>Войти</button>
+            <p>У вас нету ещё аккаунта? <a href="/signup" className={'authLink'}>Зарегистрируйтесь</a></p>
         </form>
     </div>
   )

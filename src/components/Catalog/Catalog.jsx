@@ -4,6 +4,7 @@ import { Header } from '../Header/Header'
 import Modal from '@mui/material/Modal'
 import Box from '@mui/material/Box'
 import { Footer } from '../Footer/Footer'
+import { OrderAPI, GoodApi } from '../api/api'
 
 export const Catalog = () => {
     const [open, setOpen] = useState(false)
@@ -12,7 +13,7 @@ export const Catalog = () => {
     const [title, setTitle] = useState('')
     const [price, setPrice] = useState('')
     const [image, setImage] = useState('')
-    const products = [
+    const productss = [
         {'image': '/images/Rectangle 99.png', 'title': 'Кровать с шипами', 'price': '1666 р.'},
         {'image': '/images/Rectangle 102.png', 'title': 'Бесящая кровать', 'price': '1600 р.'},
         {'image': '/images/Rectangle 91.png', 'title': 'Кресло “Зыбучий песок”', 'price': '850 р.'},
@@ -23,12 +24,19 @@ export const Catalog = () => {
         {'image': '/images/Rectangle 97.png', 'title': 'Охотничий столик', 'price': '450 р.'},
         {'image': '/images/Rectangle 98.png', 'title': 'Диван “Фатальная ошибка”', 'price': '2150 р.'},
     ]
+    const [products, setProducts] = useState([])
     const [orderArray, setOrderArray] = useState([{}])
     
     useEffect(() => {
         setOrderArray(JSON.parse(sessionStorage.getItem('item')))
+        GoodApi.getGoods().then(e => {setProducts(e.data)})
     }, [])
     const handlePay = (titleP, priceP, imageP) => {
+        // productss.map(el => {
+        //         console.log(el)
+        //         OrderAPI.fill(el)
+        //     }
+        // )
         setOrderArray(n => [...n, {'title': titleP, 'price': priceP, 'image': imageP}])
         sessionStorage.setItem('item', JSON.stringify(orderArray))
     }
@@ -82,8 +90,8 @@ export const Catalog = () => {
         <header className="header">
             <div className="container">
                 <div className="header-top">
-                    <a href="/" className="el logo">Shop</a>
-                    <div className="el d3">
+                    <a href="/" className="el logo black_color">Shop</a>
+                    <div className="el d3 black_bgcolorinput">
                         <input type="text" placeholder="Поиск" onChange={(e) => {setSearch(e.target.value)}} />
                         <img src="/images/poisk.png" alt="" className="poisk" width="25px" height="23px" />
                     </div>
@@ -93,15 +101,15 @@ export const Catalog = () => {
             </div>
             <nav className="menu">
                 <ul className="menu__list">
-                    <li className="menu__item"><a href="/catalog" className="menu__link">Каталог</a></li>
-                    <li className="menu__item"><a href="/ourProducts" className="menu__link">Наша продукция</a></li>
-                    <li className="menu__item"><a href="/contacts" className="menu__link">Контакты</a></li>
+                    <li className="menu__item"><a href="/catalog" className="menu__link black_color">Каталог</a></li>
+                    <li className="menu__item"><a href="/ourProducts" className="menu__link black_color">Наша продукция</a></li>
+                    <li className="menu__item"><a href="/contacts" className="menu__link black_color">Контакты</a></li>
                 </ul>
                 <div className="img">
-                    <a href={'/profile'} className="media">
+                    <a href={'/profile'} className="media black_bgcolor">
                         <img src="/images/people.png" alt=""/>
                     </a>
-                    <a href={'/trash'} className="media">
+                    <a href={'/trash'} className="media black_bgcolor">
                         <img src="/images/corzina.png" width="32px"height="35px" alt=""/>
                     </a>
                 </div>

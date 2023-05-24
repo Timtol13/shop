@@ -15,7 +15,7 @@ const instancePhoto = axios.create({
 
 export const AuthAPI = {
     loginReq({email, password}){
-        return instance.get(`login/${email}/${password}`).catch(e => {return 'qwe'}).then((e) => { this.findUser(email) })
+        return instance.get(`login/${email}/${password}`).catch(e => {return 'qwe'}).then(() => { this.findUser(email) }).then(() => {sessionStorage.setItem('item', JSON.stringify([{}]))})
     },
     registrationReq({login, password, name, surname, email}){
         return instance.post('registration', {login, email, name, surname, password}).then(() => {this.loginReq({login, password})})
@@ -50,9 +50,17 @@ export const AuthAPI = {
 }
 export const OrderAPI = {
     sendOrder({title, price, cardNum, cardDate, message, email, login}){
-        return instance.post('/makeOrder', {title, price, cardNum, cardDate, message, email, login})
+        return instance.post('makeOrder', {title, price, cardNum, cardDate, message, email, login})
     },
     getOrders(email){
-        return instance.get(`/getOrders/${email}`)
+        return instance.get(`getOrders/${email}`)
+    },
+    fill({image, title, price, description}){
+        return instance.post('fill', {image, title, price, description})
+    }
+}
+export const GoodApi = {
+    getGoods(){
+        return  instance.get('getGoods')
     }
 }
