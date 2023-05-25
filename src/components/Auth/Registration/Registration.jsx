@@ -30,7 +30,7 @@ export const Registration = () => {
     <div>
         <form onSubmit={formik.handleSubmit} className={'form-container'}>
             <h1 className={'formTitleAuth'}>Регистрация</h1>
-            <input type="email" name="email" placeholder="Почта" className="box" {...formik.getFieldProps('email')} value={email} onChange={(e) => {setEmail(e.target.value)}} required />
+            <input type="email" name="email" placeholder="Почта" className="box" value={email} onChange={(e) => {setEmail(e.target.value)}} {...formik.getFieldProps('email')} required />
             <input type="text" name="text" placeholder="Логин" className="box" {...formik.getFieldProps('login')} required />
             <input type="password" name="password" placeholder="Пароль" className="box" onChange={(e) => {setPassword(e.target.value)}} required />
             <input type="password" name="password" placeholder="Повторите пароль" className="box" {...formik.getFieldProps('password')} required />

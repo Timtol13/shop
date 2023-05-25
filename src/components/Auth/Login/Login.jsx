@@ -11,6 +11,7 @@ export const Login = () => {
         password: ''
       },
       onSubmit: values => {
+        console.log(values)
         AuthAPI.loginReq(values).catch(e => {console.log(e)})
       }
     }

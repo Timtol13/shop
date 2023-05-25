@@ -20,21 +20,23 @@ export const Trash = () => {
   return (
     <div>
         <Header />
-        <button className={'elementRemove'} onClick={handleClear}>Очистить корзину</button>
-        <button className={'elementBuy'} onClick={() => {window.location.replace('/order')}}>Купить</button>
-        <div className={'ordersTrash'}>
-            {orders?.map((el, index) => {
-                if(el.title){
-                    return (
-                    <div className={'productTrash'}>
-                        <img src={el.image} />
-                        <h1>{el.title}</h1>
-                        <h3>{el.price}</h3>
-                        <button className={'elementRemove'} onClick={() => {handleRemove(index)}}>Удалить</button>
-                    </div>
-                    )
-                }
-            })}
+        <div className={'trashBlock'}>
+            <button className={'elementRemove'} onClick={handleClear}>Очистить корзину</button>
+            <button className={'elementBuy'} onClick={() => {window.location.replace('/order')}}>Купить</button>
+            <div className={'ordersTrash'}>
+                {orders?.map((el, index) => {
+                    if(el.title){
+                        return (
+                        <div className={'productTrash'}>
+                            <img src={el.image} />
+                            <h1>{el.title}</h1>
+                            <h3>{el.price}</h3>
+                            <button className={'elementRemove'} onClick={() => {handleRemove(index)}}>Удалить</button>
+                        </div>
+                        )
+                    }
+                })}
+            </div>
         </div>
         <Footer />
     </div>

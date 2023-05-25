@@ -50,11 +50,12 @@ h1, h2, h3, h4, h5, h6, p, div{
     align-items: center;
 }
 .slider{
-    height: 340px;
+  width: 1800px;
+  display: flex;
 }
-
-.flickity-viewport{
-    width: 100%;
+.wrapper{
+  width: 100%;
+  overflow: scroll;
 }
 
 .botan .more{
@@ -72,7 +73,7 @@ h1, h2, h3, h4, h5, h6, p, div{
   background-color: #B3A3A1;
   margin-top: 40px; 
   width: 100%;
-  height:868px;
+  height:568px;
   padding: 0;
   /* overflow: hidden; */
 }

@@ -13,6 +13,7 @@ export const Catalog = () => {
     const [title, setTitle] = useState('')
     const [price, setPrice] = useState('')
     const [image, setImage] = useState('')
+    const [description, setDescription] = useState('')
     const productss = [
         {'image': '/images/Rectangle 99.png', 'title': 'Кровать с шипами', 'price': '1666 р.'},
         {'image': '/images/Rectangle 102.png', 'title': 'Бесящая кровать', 'price': '1600 р.'},
@@ -32,11 +33,6 @@ export const Catalog = () => {
         GoodApi.getGoods().then(e => {setProducts(e.data)})
     }, [])
     const handlePay = (titleP, priceP, imageP) => {
-        // productss.map(el => {
-        //         console.log(el)
-        //         OrderAPI.fill(el)
-        //     }
-        // )
         setOrderArray(n => [...n, {'title': titleP, 'price': priceP, 'image': imageP}])
         sessionStorage.setItem('item', JSON.stringify(orderArray))
     }
@@ -71,6 +67,7 @@ export const Catalog = () => {
                                                         handleOpen()
                                                         setTitle(el.title)
                                                         setPrice(el.price)
+                                                        setDescription(el.description)
                                                         setImage(el.image)
                                                         }
                                                         }><img src="/images/trash.png" alt=""/></button>
@@ -87,6 +84,12 @@ export const Catalog = () => {
     }
   return (
     <div>
+        {/* <button onClick={() => {
+            productss.map(el => {
+                    OrderAPI.fill(el)
+                }
+            )
+        }}>qwe</button> */}
         <header className="header">
             <div className="container">
                 <div className="header-top">
@@ -109,7 +112,7 @@ export const Catalog = () => {
                     <a href={'/profile'} className="media black_bgcolor">
                         <img src="/images/people.png" alt=""/>
                     </a>
-                    <a href={'/trash'} className="media black_bgcolor">
+                    <a href={'/trash'} onClick={() => {handlePay(null, null, null)}} className="media black_bgcolor">
                         <img src="/images/corzina.png" width="32px"height="35px" alt=""/>
                     </a>
                 </div>
@@ -137,8 +140,9 @@ export const Catalog = () => {
                 <img src={image}/>
                 <div>
                     <h1>{title}</h1>
+                    <p>{description}</p>
                     <h3>{price}</h3>
-                    <button onClick={() => {handlePay(title, price, image)}}>Купить</button>
+                    <button onClick={() => {handlePay(title, price, image); handleClose()}}>Купить</button>
                 </div>
             </div>
         </Box>

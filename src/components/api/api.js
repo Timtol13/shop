@@ -15,10 +15,12 @@ const instancePhoto = axios.create({
 
 export const AuthAPI = {
     loginReq({email, password}){
-        return instance.get(`login/${email}/${password}`).catch(e => {return 'qwe'}).then(() => { this.findUser(email) }).then(() => {sessionStorage.setItem('item', JSON.stringify([{}]))})
+        return instance.get(`login/${email}/${password}`).then(() => {sessionStorage.setItem('item', JSON.stringify([{}]))}).then(() => {
+            this.findUser(email)
+        })
     },
     registrationReq({login, password, name, surname, email}){
-        return instance.post('registration', {login, email, name, surname, password}).then(() => {this.loginReq({login, password})})
+        return instance.post('registration', {login, email, name, surname, password}).then(() => {this.loginReq({'email': email, 'password': password})})
     },
     sendPhoto({email, files}){
         console.log(email, files)

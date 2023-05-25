@@ -13,10 +13,13 @@
 .productTrash h1{
     font-size: medium;
 }
+.trashBlock{
+    margin-top: 80px;
+}
 .elementRemove{
     margin-top: auto;
     padding: 10px;
-    background-color: #f33;
+    background-color: #faa4a4;
     border: none;
     color: #fff;
     border-radius: 10px;
@@ -29,7 +32,7 @@
 .elementBuy{
     margin-top: auto;
     padding: 10px;
-    background-color: #3f3;
+    background-color: #a3df33;
     border: none;
     color: #fff;
     border-radius: 10px;

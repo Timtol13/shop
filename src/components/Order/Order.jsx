@@ -60,7 +60,7 @@ export const Order = () => {
                 <input className={'form-input-element'} type={'number'} placeholder='Введите номер карты' pattern={'/^([0-9]{4}( |\-)){3}[0-4]{4}$/'} {...formik.getFieldProps('cardNumber')} />
                 <input className={'form-input-element'} type={'date'}  {...formik.getFieldProps('cardDate')} />
                 <textarea className={'form-input-element form-textarea-element'} placeholder='Введите пожелания к заказу' {...formik.getFieldProps('message')}></textarea>
-                <button className={'form-button'} type={'submit'}>qwe</button>
+                <button className={'form-button'} type={'submit'}>Купить</button>
             </form>
         <Footer/>
     </div>
